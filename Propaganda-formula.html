@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صيغ الدعاية</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            line-height: 1.6;
+            background-image: url('https://media.licdn.com/dms/image/C561BAQFUwiRbjspH-g/company-background_10000/0/1584145708576/mohamahapp_cover?e=2147483647&v=beta&t=xowe6pRIKnNVDcAoVjHgq8bZck3qZc8cZb6GRwNi1aA');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        button {
+            background: transparent;
+            color: #fff;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: none;
+            padding: 15px 15px;
+            perspective: 30rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+            z-index: -1;
+            transition: background 0.3s ease;
+        }
+
+        button:hover::before {
+            background: linear-gradient(160deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+        }
+
+        header {
+            text-align: right;
+            padding: 20px;
+            background-color: #343434;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInDown 1s ease both;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            gap: 10px;
+            animation: fadeInDown 1s ease both;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 700px;
+            background-color: rgba(15, 15, 15, 0.8);
+            border-radius: 5px;
+            text-align: right;
+            animation: fadeInUp 1s ease both;
+        }
+
+        footer {
+            background-color: rgba(15, 15, 15, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            animation: fadeInUp 1s ease both;
+        }
+
+        img.logo {
+            width: 100px;
+            height: auto;
+            margin-left: auto;
+            animation: fadeInRight 1s ease both;
+        }
+
+        section h2 {
+            text-align: center;
+            animation: fadeInUp 1s ease both;
+        }
+
+        section p {
+            text-align: justify;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease both;
+        }
+
+        section ul {
+            padding: 0;
+            text-align: right;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease both;
+        }
+
+        section ul li {
+            list-style: none;
+            text-align: right;
+            margin-bottom: 5px;
+            animation: fadeInUp 1s ease both;
+        }
+
+        /* تعريف تأثيرات الانتقال */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translate3d(0, -50%, 0);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 50%, 0);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translate3d(50%, 0, 0);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* تعريف تأثيرات زر التنزيل */
+        .download-button {
+            position: relative;
+            border-width: 0;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 4px;
+            z-index: 1;
+            background-color: #01e056; /* اللون الأخضر */
+        }
+
+        .download-button .docs {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            min-height: 40px;
+            padding: 0 10px;
+            border-radius: 4px;
+            z-index: 1;
+            background-color: #242a35; /* اللون الرمادي الداكن */
+            border: solid 1px #e8e8e82d;
+            transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .download-button:hover {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .download {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 90%;
+            margin: 0 auto;
+            z-index: -1;
+            border-radius: 4px;
+            transform: translateY(0%);
+            background-color: #242a35; /* اللون الأخضر */
+            border: solid 1px #e8e8e82d;
+            transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .download-button:hover .download {
+            transform: translateY(100%)
+        }
+
+        .download svg polyline, .download svg line {
+            animation: docs 1s infinite;
+        }
+
+        @keyframes docs {
+            0% {
+                transform: translateY(0%);
+            }
+
+            50% {
+                transform: translateY(-15%);
+            }
+
+            100% {
+                transform: translateY(0%);
+            }
+        }
+                /* تنسيق الكارت الأخبار */
+                .news-card {
+            position: fixed;
+            top: 50%;
+            left: 1%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            border-radius: 3px;
+            width: 300px;
+            text-align: right;
+        }
+
+        /* تحريك الكارت الأخبار */
+        .news-card p {
+            display: none;
+            animation: changeNews 9s infinite;
+        }
+
+        /* تحديد نص الخبر */
+        .news-card p.active {
+            display: block;
+        }
+
+        /* تحريك النصوص */
+        @keyframes changeNews {
+            0% {
+                opacity: 0;
+            }
+            33% {
+                opacity: 1;
+            }
+            66% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>مرحباً بك في صفحة صيغ دعاوي</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5WjOwCF-tbOX6IWRdO212BwskCFf-0Y7ULg&s" class="logo" />
+    <nav>
+        <ul>
+            <li><a href="index.html"><button>الصفحة الرئيسية</button></a></li>
+        </ul>
+    </nav>
+</header>
+
+ <!-- كود الكارت الأخبار -->
+ <div class="news-card">
+    <div class="news-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaK9pquYhDKeNyGn6azySYSjwN28JOFGSf5A&s">
+    </div>
+    <p class="active">إطلاق مبادرة قانونية جديدة لتعزيز حقوق المرأة في العمل </p>
+    <div class="news-image" style="display: none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfOgYu9ftk2-S767ZnoBJnyZ_rHvf3tU76lxRfAq-qAw&s" alt="صورة الخبر الثاني" style="width: 100%; border-radius: 10px;">
+    </div>
+    <p>تحديث قانوني يعزز حماية حقوق المستأجرين في الإيجارات السكنية</p>
+    <div class="news-image" style="display: none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1MiF-2EyIyXh7FnlqGj9tVMdnZYbAKiuUDQ&s" alt="صورة الخبر الثالث" style="width: 100%; border-radius: 10px;">
+    </div>
+    <p>توقيع اتفاقية دولية لمكافحة الفساد وتعزيز الشفافية الحكومية</p>
+</div>
+
+<section>
+    <h2 style="color: #3498db;">صيغ دعاوي</h2>
+
+    <p>هنا يمكنك تنزيل صيغ دعاوي المختلفة.</p>
+    
+
+   
+
+    <section style="margin-top: 50px;">
+        <h2>اعادة اعلان الدعوي الي الرول</h2>
+        <a href="https://drive.google.com/file/d/10TKoNd9vB4A5-ZP4nFA33RyHN43eQaqO/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل 
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+    
+
+    <section style="margin-top: 50px;">
+        <h2>صيغة استئناف حكم</h2>
+        <a href="https://drive.google.com/file/d/10dzSOCXiGJudDY7oN4dDRMv7jgjVNMT5/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>صيغة اعادة اعلان</h2>
+        <a href="https://drive.google.com/file/d/10eQ-1a4bbXfm0bNkXhavGsQlbQq0tkPc/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>علان تجديد دعوي من الشطب 
+        </h2>
+        <a href="https://drive.google.com/file/d/10oUN9xdn9dfeDQQyznAgOCQdHYj4swQ2/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>اعلان بتصحيح شكل الدعوي</h2>
+        <a href="https://drive.google.com/file/d/10vUQaHeAAUYb4Q6KYbJyMv2KRAjaYzzq/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>اعلان بتعديل الطلبات</h2>
+        <a href="https://drive.google.com/file/d/116hjn5lltHrVtsgr98G5m5faRcYnJFTO/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>دعوى مستعجله لاعادة التيار الكهربائي
+        </h2>
+        <a href="https://drive.google.com/file/d/11DHItGALCbL_q06n0ACHJ7UxqxZDjbUw/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>دعوي مستعجله لسماع الشهود
+        </h2>
+        <a href="https://drive.google.com/file/d/11FR5zwtTSVhKvIR1TNSY7NnOafBzLSW5/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>دعوي فرز وتجنيب</h2>
+        <a href="https://drive.google.com/file/d/119TQxc8v2Wd10cU9L7BHsjfMsMw4Kfrl/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>اشكال في حكم صادر من محكمة الجنح المستأنفة
+        </h2>
+        <a href="https://drive.google.com/file/d/13iinSezCCaxa-EHwC4IKZF58XWgBH5AM/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>اشكال في تنفيذ حكم فقدت نسخته الأصلية</h2>
+        <a href="https://drive.google.com/file/d/13vZ53_o61HL8R9aeKtpX8A3qMYl0YqB6/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>شكال في حكم غيابي صادر في جناية
+        </h2>
+        <a href="https://drive.google.com/file/d/13twtlCsxinjTpHaE53duJVbBBSGvvvIc/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>إشكال في حكم غيابي صادر في جنحة أو مخالفة
+        </h2>
+        <a href="https://drive.google.com/file/d/13nTFr7J_F-_5t0l-zlrCaAHoEfV1fOCZ/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>دعوي اخلاء لعدم سداد القيمة الايجارية
+        </h2>
+        <a href="https://drive.google.com/file/d/13DZDX5wSgXITwx_vDxuWZ1EwJbBZ0B9Q/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>دعوي لاثبات قيام علاقة تجارية</h2>
+        <a href="https://drive.google.com/file/d/13IYyAloPkzf-6NPbYXSBvGcY3dHIzxSj/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2> انذار بعدم الرغبة في تجديد عقد الايجار
+        </h2>
+        <a href="https://drive.google.com/file/d/13KKVcAO0XZNFHHKfU6FUR5ZScKXe6JaN/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>دعوي انهاء عقد الايجار لقيام الورثة بتغير النشاط التجاري 
+        </h2>
+        <a href="https://drive.google.com/file/d/13RauEDZYLllOt-YYk03RT8U24NtqCP42/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>دعوي مستعجله لطرد عين مؤجرة مفروشة</h2>
+        <a href="https://drive.google.com/file/d/13FEFBP3qc_KzNjGZuOtUA7OtA9ueSMxj/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>تزوير محرر عرفي
+        </h2>
+        <a href="https://drive.google.com/file/d/13YFduRGoF94K04bHr1W_qGLE5bSBpMqR/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>جنحة اهانة موظف
+        </h2>
+        <a href="https://drive.google.com/file/d/13gbZSbMUkdRMq5EIlbKnO8Q_0A9L5pJE/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>شهادة زور</h2>
+        <a href="https://drive.google.com/file/d/13_HRgz2hZz8H_f0KmAilMyaW-yUUiP76/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>دعوي صحة توقيع 
+        </h2>
+        <a href="https://drive.google.com/file/d/12_8FmMKYtZUPbn9FCdK5SW79qkas9s-c/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>دعوي فسخ عقد بيع
+        </h2>
+        <a href="https://drive.google.com/file/d/12jxjY5vj7wtbIX6Bs5xUu9U9RQdVCj9E/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>دعوي نفقة زوجية
+        </h2>
+        <a href="https://drive.google.com/file/d/11bu1FhhsiFO2PCiYUJrZDfg8lAAXlEyK/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>دعوي زيادة نفقة زوجية و صغر
+        </h2>
+        <a href="https://drive.google.com/file/d/11WqfxMcKZb8Bwd-05HhAmOTeP0Cv41T7/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>اعلان وراثة </h2>
+        <a href="https://drive.google.com/file/d/11VHTPXlUYVH3zLasw_7nY4OES-9Qgs8f/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>طلب تحقيق وفاة ووراثة
+        </h2>
+        <a href="https://drive.google.com/file/d/11cMX1PpAvF3Cf5PGyLIfOJofYeu3qT37/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    
+    <section style="margin-top: 50px;">
+        <h2>انذار عرض منقولات زوجية
+        </h2>
+        <a href="https://drive.google.com/file/d/11WhlfrsUj7_aMyMHWC9l6DHS2V3zy5w5/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+    <section style="margin-top: 50px;">
+        <h2>طلب عزل وصي </h2>
+        <a href="https://drive.google.com/file/d/123T6H_Zoyfn-fSDLY2RmRcNgMTp69fhd/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+     <section style="margin-top: 50px;">
+        <h2>طلب الحصول علي قرار وصاية </h2>
+        <a href="https://drive.google.com/file/d/12C4XjgZcn1Bxo2ZUzBF-xpZ0Q5U-e21A/view?usp=drivesdk" target="_blank" class="download-link">
+            <button class="download-button">
+                <div class="docs">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line y2="13" x2="8" y1="13" x1="16"></line>
+                        <line y2="17" x2="8" y1="17" x1="16"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg> 
+                    تنزيل
+                </div>
+                <div class="download">
+                    <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line y2="3" x2="12" y1="15" x1="12"></line>
+                    </svg>
+                </div>
+            </button>
+        </a>
+    </section>
+
+
+
+
+</section>
+<footer>
+    <p>حقوق الطبع والنشر &copy; 2024</p>
+</footer>
+<script>
+    // اختيار جميع الأخبار والصور
+    const newsItems = document.querySelectorAll('.news-card p');
+    const newsImages = document.querySelectorAll('.news-card .news-image');
+    let currentNewsIndex = 0;
+
+    // إظهار الخبر التالي وإخفاء الحالي
+    function showNextNews() {
+        // إخفاء الخبر الحالي والصورة
+        newsItems[currentNewsIndex].classList.remove('active');
+        newsImages[currentNewsIndex].style.display = 'none';
+
+        // زيادة الفهرس لعرض الخبر التالي، وإذا وصلنا إلى نهاية القائمة نبدأ من البداية مرة أخرى
+        currentNewsIndex = (currentNewsIndex + 1) % newsItems.length;
+
+        // إظهار الخبر التالي والصورة
+        newsItems[currentNewsIndex].classList.add('active');
+        newsImages[currentNewsIndex].style.display = 'block';
+    }
+
+    // عرض الخبر التالي كل 9 ثواني
+    setInterval(showNextNews, 9000);
+</script>
+</body>
+</html>

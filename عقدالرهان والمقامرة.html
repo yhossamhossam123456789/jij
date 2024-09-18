@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عقد الرهان والمقامرة</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            line-height: 1.6;
+            background-image: url('https://media.licdn.com/dms/image/C561BAQFUwiRbjspH-g/company-background_10000/0/1584145708576/mohamahapp_cover?e=2147483647&v=beta&t=xowe6pRIKnNVDcAoVjHgq8bZck3qZc8cZb6GRwNi1aA');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        button {
+            background: transparent;
+            color: #fff;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: none;
+            padding: 15px 15px;
+            perspective: 30rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+            z-index: -1;
+            transition: background 0.3s ease;
+        }
+
+        button:hover::before {
+            background: linear-gradient(160deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+        }
+
+        header {
+            text-align: right;
+            padding: 20px;
+            background-color: #343434;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            gap: 10px;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 700px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            text-align: right;
+            animation: fadeInUp 1s ease-out;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0; /* لجعله يظهر في أسفل الصفحة */
+        }
+
+        img.logo {
+            width: 100px;
+            height: auto;
+            margin-left: auto;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #3498db;
+        }
+
+        section p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        section ul {
+            padding: 0;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        section ul li {
+            list-style: none;
+            text-align: right;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>مرحباً بك في صفحة عقد الرهان والمقامرة</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5WjOwCF-tbOX6IWRdO212BwskCFf-0Y7ULg&s" class="logo" />
+    <nav>
+        <ul>
+            <li><a href="http://127.0.0.1:5500/types-of-contracts.html"><button>صفحة انواع العقود</button></a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2>عقد الرهان والمقامرة</h2>
+    <p>الرهان هو اتفاق بين طرفين أو أكثر على تعيين جائزة لمن يفوز في حدث مستقبلي، مع تعيين شروط محددة لمعرفة الفائز.</p>
+    <p>المقامرة هي ممارسة المراهنة على ألعاب تعتمد على الحظ أو المهارة، مع وجود مخاطرة بفقدان المال أو ممتلكات أخرى.</p>
+    <h3>خصائص عقود الرهان والمقامرة:</h3>
+    <ul>
+        <li>العوض: يُعدّ العوض عنصرًا أساسيًا في عقود الرهان والمقامرة، حيث يتفق الطرفان على تقديم شيء ذي قيمة للفائز.</li>
+        <li>المخاطرة: تتضمن عقود الرهان والمقامرة عنصرًا من المخاطرة، حيث يضع كل طرف شيءًا ذي قيمة على المحك، مع احتمال خسارته.</li>
+        <li>الاحتمالية: تعتمد عقود الرهان والمقامرة على احتمالية حدوث حدث معين، حيث يُحدد الطرفان احتمالية حدوث كل نتيجة، ويضعان رهاناتهم وفقًا لذلك.</li>
+    </ul>
+    <h3>أنواع عقود الرهان والمقامرة:</h3>
+    <ul>
+        <li>الرهان على الأحداث: مثل المراهنات على نتائج المباريات الرياضية أو الانتخابات.</li>
+        <li>ألعاب الحظ: مثل ألعاب الورق أو الروليت أو ماكينات القمار.</li>
+        <li>ألعاب المهارة: مثل ألعاب الشطرنج أو البلياردو أو لعبة البوكر.</li>
+    </ul>
+    <h3>الحكم الشرعي لعقود الرهان والمقامرة</h3>
+    <p>تُحرم عقود الرهان والمقامرة في الشريعة الإسلامية، وذلك لاشتمالها على الغرر والميسر.</p>
+    <p>يجوز الرهان في بعض الحالات الاستثنائية، مثل الرهان على سباق الخيل أو الإبل، بشرط أن يكون الهدف هو تحسين السلالة أو تشجيع الرياضة.</p>
+    <h3>الآثار السلبية لعقود الرهان والمقامرة</h3>
+    <ul>
+        <li>الآثار الاقتصادية: قد تؤدي عقود الرهان والمقامرة إلى خسارة الأموال، مما قد يؤثر على استقرار الفرد والعائلة.</li>
+        <li>الآثار الاجتماعية: قد تؤدي عقود الرهان والمقامرة إلى الإدمان، مما قد يؤثر على العلاقات الاجتماعية والمهنية.</li>
+        <li>الآثار النفسية: قد تؤدي عقود الرهان والمقامرة إلى الشعور بالقلق والاكتئاب، وقد تزيد من خطر الإصابة بأمراض نفسية أخرى.</li>
+    </ul>
+    <h3>نصائح لتجنب عقود الرهان والمقامرة:</h3>
+    <ul>
+        <li>التوعية بالمخاطر: يجب على الفرد أن يكون على دراية بالمخاطر التي تنطوي عليها عقود الرهان والمقامرة.</li>
+        <li>التحكم في النفس: يجب على الفرد أن يتحكم في رغباته، وأن يقاوم إغراء المشاركة في عقود الرهان والمقامرة.</li>
+        <li>طلب المساعدة: في حال واجه الفرد صعوبة في التخلص من إدمان الرهان والمقامرة، يجب عليه طلب المساعدة من مختصين.</li>
+    </ul>
+    <p>ملاحظة: هذه المعلومات مقدمة لأغراض ثقافية فقط، ولا تُعدّ بديلاً عن الاستشارة القانونية أو الشرعية. يجب على الفرد التأكد من قوانين بلده قبل المشاركة في أي نوع من أنواع عقود الرهان والمقامرة.</p>
+</section>
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2024</p>
+</footer>
+
+</body>
+</html>

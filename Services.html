@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدماتنا</title>
+    <style>
+        /* الأسلوب */
+        body {
+            font-family: "Arial", sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            line-height: 1.6;
+            background-image: url('https://media.licdn.com/dms/image/C561BAQFUwiRbjspH-g/company-background_10000/0/1584145708576/mohamahapp_cover?e=2147483647&v=beta&t=xowe6pRIKnNVDcAoVjHgq8bZck3qZc8cZb6GRwNi1aA');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* زر */
+        button {
+            background: transparent;
+            color: #fff;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: none;
+            padding: 15px 15px;
+            perspective: 30rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        button::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+            z-index: -1;
+            transition: background 0.3s ease;
+        }
+
+        button:hover::before {
+            background: linear-gradient(160deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+        }
+
+        /* رأس */
+        header {
+            text-align: right;
+            padding: 20px;
+            background-color: #343434;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInDown 1s ease both;
+            margin-bottom: 20px; /* فرق بين الرأس والكروت */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            gap: 10px;
+            animation: fadeInDown 1s ease both;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* القسم */
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 700px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            text-align: right;
+            animation: fadeInUp 1s ease both;
+        }
+
+        /* تنسيق الكارت الأخبار */
+        .news-card {
+            position: fixed;
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 230px;
+            text-align: right;
+        }
+
+        /* تحريك الكارت الأخبار */
+        .news-card p {
+            display: none;
+            animation: changeNews 9s infinite;
+        }
+
+        /* تحديد نص الخبر */
+        .news-card p.active {
+            display: block;
+        }
+
+        /* كارت */
+        .card-container {
+    width: 300px; /* تحديد العرض */
+    height: 300px; /* تحديد الارتفاع */
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    float: right;
+    margin-left: 10px;
+}
+
+.card {
+    width: 100%; /* جعل عرض الكارت يساوي ارتفاعه */
+    height: 100%; /* جعل ارتفاع الكارت يساوي عرضه */
+    border-radius: inherit;
+    background-size: 100% 100%; /* عرض الصورة بحجمها الكامل */
+}
+
+
+        .card .front-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+        }
+
+        .card .front-content p {
+            font-size: 30px; /* تصغير حجم النص */
+            font-weight: 900;
+            opacity: 1;
+            background: rgba(255, 2, 2, 0.8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1)
+        }
+
+        .card .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 10px;
+            background:rgba(0, 0, 0, 0.8);
+            color: #e8e8e8;
+            padding: 1%;
+            line-height: 1.5;
+            border-radius: 5px;
+            pointer-events: none;
+            transform: translateX(-96%);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .card .content .heading {
+            font-size: 20px; /* تصغير حجم النص */
+            font-weight: 700;
+        }
+
+        .card:hover .content {
+            transform: translateY(0);
+        }
+
+        .card:hover .front-content {
+            transform: translateX(-30%);
+        }
+
+        .card:hover .front-content p {
+            opacity: 0;
+        }
+
+        /* قدم */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            animation: fadeInUp 1s ease both;
+            clear: both; /* تحديد مسافة أسفل الصفحة */
+        }
+
+        /* لوجو */
+        img.logo {
+            width: 100px;
+            height: auto;
+            margin-left: auto;
+            animation: fadeInRight 1s ease both;
+        }
+
+        /* الانتقالات */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translate3d(0, -50%, 0);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 50%, 0);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translate3d(50%, 0, 0);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* تحريك النصوص */
+        @keyframes changeNews {
+            0% {
+                opacity: 0;
+            }
+            33% {
+                opacity: 1;
+            }
+            66% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>مرحباً بك في صفحة خدماتنا</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5WjOwCF-tbOX6IWRdO212BwskCFf-0Y7ULg&s" class="logo" />
+    <nav>
+        <ul>
+            <li><a href="index.html"><button>الصفحة الرئيسية</button></a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- كارت الاول -->
+<div class="card-container">
+    <div class="card" style="background-image: url('خدمات المشورة القانونية.jpg');">
+        <div class="front-content">
+            <p>خدمات المشورة القانونية</p>
+        </div>
+        <div class="content">
+            <p class="heading">خدمات المشورة القانونية</p>
+            <p>
+                نقدم استشارات قانونية متخصصة للأفراد والشركات في مجموعة واسعة من المجالات القانونية، بما في ذلك القانون الجنائي، والقانون التجاري، وقانون الأسرة، وغيرها. يمكنك الاعتماد علينا للمشورة القانونية الموثوقة والفعالة.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- كارت الثاني -->
+<div class="card-container">
+    <div class="card" style="background-image: url('خدمات توثيق العقود.jpg');">
+        <div class="front-content">
+            <p>خدمات توثيق العقود</p>
+        </div>
+        <div class="content">
+            <p class="heading">خدمات توثيق العقود</p>
+            <p>
+                نقدم خدمات توثيق العقود بموثوقية عالية وبسرعة. سواء كنت تحتاج إلى توثيق عقد إيجار أو عقد بيع، يمكننا مساعدتك في توثيق المستندات القانونية بشكل صحيح وفعال.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- كارت الثالث-->
+<div class="card-container">
+    <div class="card" style="background-image: url('خدمات التوسط الالكتروني.jpg');">
+        <div class="front-content">
+            <p>خدمات التوسط القانوني</p>
+        </div>
+        <div class="content">
+            <p class="heading">خدمات التوسط القانوني</p>
+            <p>
+                نقدم خدمات التوسط القانوني كبديل فعال للمحاكمة التقليدية. سواء كنت تواجه نزاعًا أو ترغب في حل خلاف بشكل سلمي، يمكننا تقديم التوسط القانوني للمساعدة في حل النزاعات بشكل سلس وفعال.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- كارت الرابع-->
+<div class="card-container">
+    <div class="card" style="background-image: url('خدمات التحكم الدولي.jpg');">
+        <div class="front-content">
+            <p>خدمات التحكيم الدولي</p>
+        </div>
+        <div class="content">
+            <p class="heading">خدمات التحكيم الدولي</p>
+            <p>
+                نحن نقدم خدمات التحكيم الدولي كبديل فعال للنظام القضائي التقليدي. يمكنك الاعتماد علينا لتوفير إجراءات التحكيم الشفافة والعادلة لحل النزاعات الدولية بشكل سلس وفعال.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- كارت الخامس-->
+<div class="card-container">
+    <div class="card" style="background-image: url('خدمات استشارات الاعمال .jpg');">
+        <div class="front-content">
+            <p>خدمات استشارات الأعمال</p>
+        </div>
+        <div class="content">
+            <p class="heading">خدمات استشارات الأعمال</p>
+            <p>
+                نحن نقدم استشارات قانونية متخصصة للشركات في مجالات مثل تأسيس الشركات، وإعداد العقود التجارية، وحقوق الملكية الفكرية، وغيرها. اعتمد على فريقنا المؤهل للحصول على النصائح القانونية الشاملة التي تحتاجها لنجاح أعمالك.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- كارت السادس-->
+<div class="card-container">
+    <div class="card" style="background-image: url('خدمات التنفيذ القانوني.jpg');">
+        <div class="front-content">
+            <p>خدمات التنفيذ القانوني</p>
+        </div>
+        <div class="content">
+            <p class="heading">خدمات التنفيذ القانوني</p>
+            <p>
+                نقدم خدمات التنفيذ القانوني لتنفيذ القرارات القضائية والحكم الصادرة من المحاكم. سواء كنت بحاجة إلى تنفيذ حكم قضائي أو توثيق عقد تنفيذ، يمكننا مساعدتك في تنفيذ القرارات بفعالية وسرعة.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- كارت السابع-->
+<div class="card-container">
+    <div class="card" style="background-image: url('خدمات الخلافات القانونية .jpg');">
+        <div class="front-content">
+            <p>خدمات الخلافات القانونية</p>
+        </div>
+        <div class="content">
+            <p class="heading">خدمات الخلافات القانونية</p>
+            <p>
+                نقدم حلولًا شاملة لإدارة وحل الخلافات القانونية، بما في ذلك الخلافات التجارية، والأحكام التجارية، وغيرها. يمكنك الاعتماد على فريقنا المؤهل للمساعدة في حل النزاعات بطرق فعالة وسلسة.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- كارت الثامن-->
+<div class="card-container">
+    <div class="card" style="background-image: url('خدمات الوساطه القانونية.jpg');">
+        <div class="front-content">
+            <p>خدمات الوساطة القانونية</p>
+        </div>
+        <div class="content">
+            <p class="heading">خدمات الوساطة القانونية</p>
+            <p>
+                نقدم خدمات الوساطة القانونية لحل النزاعات بشكل سلمي وفعال، بما في ذلك النزاعات الأسرية، والتجارية، والمدنية. تعتمد على فريقنا للمساعدة في الوصول إلى حلول توفير الوقت والمال للأطراف المعنية.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+ <!-- كود الكارت الأخبار -->
+ <div class="news-card">
+    <div class="news-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMixBfK50UiybRu6E1RoD_1MZ5GOVIk8pg8Q&s">
+    </div>
+    <p class="active">إطلاق مبادرة قانونية جديدة لتعزيز حقوق المرأة في العمل </p>
+    <div class="news-image" style="display: none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfOgYu9ftk2-S767ZnoBJnyZ_rHvf3tU76lxRfAq-qAw&s" alt="صورة الخبر الثاني" style="width: 100%; border-radius: 10px;">
+    </div>
+    <p>تحديث قانوني يعزز حماية حقوق المستأجرين في الإيجارات السكنية</p>
+    <div class="news-image" style="display: none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1MiF-2EyIyXh7FnlqGj9tVMdnZYbAKiuUDQ&s" alt="صورة الخبر الثالث" style="width: 100%; border-radius: 10px;">
+    </div>
+    <p>توقيع اتفاقية دولية لمكافحة الفساد وتعزيز الشفافية الحكومية</p>
+</div>
+<script>
+    // اختيار جميع الأخبار والصور
+    const newsItems = document.querySelectorAll('.news-card p');
+    const newsImages = document.querySelectorAll('.news-card .news-image');
+    let currentNewsIndex = 0;
+
+    // إظهار الخبر التالي وإخفاء الحالي
+    function showNextNews() {
+        // إخفاء الخبر الحالي والصورة
+        newsItems[currentNewsIndex].classList.remove('active');
+        newsImages[currentNewsIndex].style.display = 'none';
+
+        // زيادة الفهرس لعرض الخبر التالي، وإذا وصلنا إلى نهاية القائمة نبدأ من البداية مرة أخرى
+        currentNewsIndex = (currentNewsIndex + 1) % newsItems.length;
+
+        // إظهار الخبر التالي والصورة
+        newsItems[currentNewsIndex].classList.add('active');
+        newsImages[currentNewsIndex].style.display = 'block';
+    }
+
+    // عرض الخبر التالي كل 9 ثواني
+    setInterval(showNextNews, 9000);
+</script>
+<!-- قدم -->
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2024</p>
+</footer>
+</body>
+</html>

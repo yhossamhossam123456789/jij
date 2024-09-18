@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المعلومات القانونية</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            line-height: 1.6;
+            background-image: url('https://media.licdn.com/dms/image/C561BAQFUwiRbjspH-g/company-background_10000/0/1584145708576/mohamahapp_cover?e=2147483647&v=beta&t=xowe6pRIKnNVDcAoVjHgq8bZck3qZc8cZb6GRwNi1aA');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        button {
+            background: transparent;
+            color: #ffffff;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: none;
+            padding: 15px 15px;
+            perspective: 30rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+            z-index: -1;
+            transition: background 0.3s ease;
+        }
+
+        button:hover::before {
+            background: linear-gradient(160deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+        }
+
+        header {
+            text-align: right;
+            padding: 20px;
+            background-color: #343434;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 700px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            text-align: right;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        img.logo {
+            width: 100px;
+            height: auto;
+            margin-left: auto;
+        }
+
+        section h2 {
+            text-align: center;
+        }
+
+        section p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        section ul {
+            padding: 0;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        section ul li {
+            list-style: none;
+            text-align: right;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>مرحباً بك في صفحة المعلومات القانونية</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5WjOwCF-tbOX6IWRdO212BwskCFf-0Y7ULg&s" class="logo" />
+    <nav>
+        <ul>
+            <li><a href="index.html"><button>الصفحة الرئيسية</button></a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2>المعلومات القانونية</h2>
+    <p>هذه الصفحة تحتوي على المعلومات القانونية الهامة التي يحتاجها المواطن في حياته اليومية.</p>
+    <ul>
+        <li>حقوق المواطن</li>
+        <li>التشريعات والقوانين</li>
+        <li>الإجراءات القانونية</li>
+        <li>المعلومات القانونية المهمة</li>
+        <!-- يمكنك إضافة المزيد من المعلومات القانونية هنا -->
+    </ul>
+</section>
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2024</p>
+</footer>
+
+</body>
+</html>

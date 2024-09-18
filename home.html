@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الكتروني للخدمات القانونية</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            direction: rtl; /* تحديد اتجاه الكتابة إلى اليمين */
+            line-height: 1.6; /* تحديد تباعد الأسطر */
+        }
+
+        /* تطبيق نمط الزر على جميع الأزرار (button و a) */
+        button, a {
+            all: unset;
+            display: inline-block; /* جعل الأزرار تظهر بجانب بعضها */
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover, a:hover {
+            background-color: #0056b3;
+        }
+
+        /* تأثير لون الزر عند التحويم */
+        button:hover {
+            background-color: #ff7f50; /* لون برتقالي متداخل */
+        }
+
+        a:hover {
+            background-color: #20bf6b; /* لون أخضر متداخل */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto; /* توسيط الأقسام على الشاشة */
+            max-width: 700px; /* حد أقصى لعرض الأقسام */
+            background-color: #fff;
+            border-radius: 5px;
+            text-align: right; /* تحديد اتجاه النص إلى اليمين */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+
+        /* تخصيص تنسيق العناصر داخل الأقسام */
+        section h2 {
+            text-align: center; /* توسيط العنوان في الأقسام */
+        }
+
+        section p {
+            text-align: justify; /* محاذاة النص بشكل متساوٍ */
+            margin-bottom: 15px; /* تخصيص المسافة بين الفقرات */
+        }
+
+        section ul {
+            padding: 0;
+            text-align: justify; /* محاذاة النص بشكل متساوٍ */
+            margin-bottom: 15px; /* تخصيص المسافة بين القوائم */
+        }
+
+        section ul li {
+            list-style: none; /* إزالة نقاط القوائم */
+            text-align: right;
+            margin-bottom: 5px; /* تخصيص المسافة بين العناصر */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>مرحباً بك في موقع الخدمات القانونية</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#legal-info">المعلومات القانونية</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+                <li><a href="types-of-contracts.html" target="_blank">أنواع العقود</a></li>
+                <li><a href="court-locations.html" target="_blank">أماكن المحاكم</a></li>
+                <li><a href="egyptian-laws-encyclopedia.html" target="_blank">موسوعة القوانين المصرية</a></li>
+                <li><a href="administrative-lawsuits.html" target="_blank">صيغ دعاوى </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services">
+        <h2>خدماتنا القانونية</h2>
+        <p>نقدم مجموعة متنوعة من الخدمات القانونية للمواطنين، بما في ذلك:</p>
+        <ul>
+            <li>استشارات قانونية عامة</li>
+            <li>إعداد وثائق قانونية</li>
+            <li>تمثيل قانوني في المحاكم</li>
+            <li>حل النزاعات القانونية</li>
+        </ul>
+        <img src="services.jpg" alt="خدمات قانونية">
+    </section>
+
+    <section id="legal-info">
+        <h2>المعلومات القانونية المفيدة</h2>
+        <p>نقدم مقالات ونصائح قانونية للمواطنين حول القضايا الشائعة وحقوقهم القانونية. تشمل هذه المواضيع:</p>
+        <ul>
+            <li>حقوق المستأجرين</li>
+            <li>القانون العمالي وحماية العمال</li>
+            <li>حقوق المستهلكين</li>
+        </ul>
+        <img src="legal-info.jpg" alt="معلومات قانونية">
+    </section>
+
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <p>للحصول على مزيد من المعلومات أو للاستفسار عن خدماتنا، يمكنك التواصل معنا عبر البريد الإلكتروني أو الهاتف:</p>
+        <p>البريد الإلكتروني: info@legalwebsite.com</p>
+        <p>الهاتف: 123456789</p>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2024</p>
+    </footer>
+</body>
+</html>

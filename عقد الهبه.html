@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عقد الهبة</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            line-height: 1.6;
+            background-image: url('https://media.licdn.com/dms/image/C561BAQFUwiRbjspH-g/company-background_10000/0/1584145708576/mohamahapp_cover?e=2147483647&v=beta&t=xowe6pRIKnNVDcAoVjHgq8bZck3qZc8cZb6GRwNi1aA');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        button {
+            background: transparent;
+            color: #fff;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: none;
+            padding: 15px 15px;
+            perspective: 30rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+            z-index: -1;
+            transition: background 0.3s ease;
+        }
+
+        button:hover::before {
+            background: linear-gradient(160deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+        }
+
+        header {
+            text-align: right;
+            padding: 20px;
+            background-color: #343434;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            gap: 10px;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 700px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            text-align: right;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0; /* لجعله يظهر في أسفل الصفحة */
+        }
+
+        img.logo {
+            width: 100px;
+            height: auto;
+            margin-left: auto;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #3498db;
+        }
+
+        section p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        section ul {
+            padding: 0;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        section ul li {
+            list-style: none;
+            text-align: right;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>مرحباً بك في صفحة عقد الهبة</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5WjOwCF-tbOX6IWRdO212BwskCFf-0Y7ULg&s" class="logo" />
+    <nav>
+        <ul>
+            <li><a href="http://127.0.0.1:5500/types-of-contracts.html"><button>صفحة انواع العقود</button></a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2>عقد الهبة</h2>
+    <p>يُعد عقد الهبة من العقود الواردة في الشريعة الإسلامية، وهو عقد يتم بموجبه تمليك شيء معين من شخص (الواهب) إلى شخص آخر (الموهوب له) دون مقابل.</p>
+    <h3>خصائص عقد الهبة:</h3>
+    <ul>
+        <li>عقد تمليكي: ينقل ملكية الشيء الموهوب من الواهب إلى الموهوب له.</li>
+        <li>عقد مجاني: لا يشترط فيه مقابل من الموهوب له.</li>
+        <li>عقد رضائي: ينعقد بمجرد رضا الواهب والموهوب له.</li>
+        <li>عقد غير لازم: للواهب الحق في الرجوع في الهبة، سواء كان الرجوع بالتراضي أو بالتقاضي، ما لم تكن هناك موانع تمنع الرجوع.</li>
+    </ul>
+    <h3>شروط صحة عقد الهبة:</h3>
+    <ul>
+        <li>أهلية الواهب: يجب أن يكون الواهب عاقلاً رشيدًا.</li>
+        <li>أهلية الموهوب له: يجوز أن يكون الموهوب له محجوراً عليه.</li>
+        <li>تعيين الشيء الموهوب: يجب أن يكون الشيء الموهوب معينًا وقابلاً للتسليم.</li>
+        <li>القبول: يجب أن يقبل الموهوب له الهبة.</li>
+    </ul>
+    <h3>أركان عقد الهبة:</h3>
+    <ul>
+        <li>الايجاب: هو إعلان الواهب عن رغبته في تمليك الشيء الموهوب.</li>
+        <li>القبول: هو إعلان الموهوب له عن قبوله للهبة.</li>
+    </ul>
+    <h3>أحكام عقد الهبة:</h3>
+    <ul>
+        <li>التزامات الواهب: تسليم الشيء الموهوب للموهوب له، ضمان سلامة الشيء الموهوب من العيوب، ضمان خلو الشيء الموهوب من الحقوق العينية.</li>
+        <li>التزامات الموهوب له: لا توجد التزامات على الموهوب له في عقد الهبة.</li>
+    </ul>
+    <h3>فسخ عقد الهبة:</h3>
+    <ul>
+        <li>الرجوع في الهبة: يجوز للواهب الرجوع في الهبة، سواء كان الرجوع بالتراضي أو بالتقاضي، ما لم تكن هناك موانع تمنع الرجوع.</li>
+    </ul>
+    <h3>تفاصيل عقد الهبة:</h3>
+    <ul>
+        <li>بيانات الواهب والموهوب له: الاسم الكامل، العنوان، الرقم القومي.</li>
+        <li>بيانات الشيء الموهوب: نوع الشيء الموهوب، وصف دقيق، كمية الشيء الموهوب.</li>
+        <li>شروط الهبة: شروط محددة في حال عدم وفاء أحد الطرفين بالتزاماته.</li>
+        <li>التوقيعات: توقيع الواهب والموهوب له على جميع صفحات العقد.</li>
+    </ul>
+</section>
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2024</p>
+</footer>
+
+</body>
+</html>

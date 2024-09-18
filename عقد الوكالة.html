@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عقد الوكالة</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            line-height: 1.6;
+            background-image: url('https://media.licdn.com/dms/image/C561BAQFUwiRbjspH-g/company-background_10000/0/1584145708576/mohamahapp_cover?e=2147483647&v=beta&t=xowe6pRIKnNVDcAoVjHgq8bZck3qZc8cZb6GRwNi1aA');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        button {
+            background: transparent;
+            color: #fff;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: none;
+            padding: 15px 15px;
+            perspective: 30rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+            z-index: -1;
+            transition: background 0.3s ease;
+        }
+
+        button:hover::before {
+            background: linear-gradient(160deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+        }
+
+        header {
+            text-align: right;
+            padding: 20px;
+            background-color: #343434;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            gap: 10px;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 700px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            text-align: right;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0; /* لجعله يظهر في أسفل الصفحة */
+        }
+
+        img.logo {
+            width: 100px;
+            height: auto;
+            margin-left: auto;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #3498db;
+        }
+
+        section p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        section ul {
+            padding: 0;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        section ul li {
+            list-style: none;
+            text-align: right;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>مرحباً بك في صفحة عقد الوكالة</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5WjOwCF-tbOX6IWRdO212BwskCFf-0Y7ULg&s" class="logo" />
+    <nav>
+        <ul>
+            <li><a href="http://127.0.0.1:5500/types-of-contracts.html"><button>صفحة انواع العقود</button></a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2>عقد الوكالة</h2>
+    <p>عقد الوكالة هو عقد رضائي يلتزم بموجبه شخص (الموكل) بتوكيل شخص آخر (الوكيل) بإنجاز عمل قانوني معين نيابة عنه ولحسابه. ويعتبر الوكيل نائباً عن الموكل في التصرفات التي يقوم بها في إطار العمل الموكل به.</p>
+    <h3>أركان عقد الوكالة:</h3>
+    <ul>
+        <li>الرضا: يجب أن يكون هناك رضا من كل من الموكل والوكيل على إبرام العقد.</li>
+        <li>الأهلية: يجب أن يكون كل من الموكل والوكيل أهلاً للتصرف.</li>
+        <li>السبب: يجب أن يكون هناك سبب مشروع لعقد الوكالة.</li>
+        <li>الموضوع: يجب أن يكون موضوع عقد الوكالة عملاً قانونياً معيناً.</li>
+    </ul>
+    <h3>أنواع عقد الوكالة:</h3>
+    <ul>
+        <li>الوكالة العامة: هي وكالة تشمل جميع أعمال الموكل.</li>
+        <li>الوكالة الخاصة: هي وكالة تشمل عملًا معينًا أو أعمالاً معينة.</li>
+        <li>الوكالة بالعمولة: هي وكالة يتقاضى بموجبها الوكيل عمولة على الأعمال التي يقوم بها.</li>
+    </ul>
+    <h3>خصائص عقد الوكالة:</h3>
+    <ul>
+        <li>عقد رضائي: لا يشترط لصحة عقد الوكالة كتابةً، بل يجوز إثباته بكافة طرق الإثبات.</li>
+        <li>عقد ملزم للجانبين: يلتزم كل من الموكل والوكيل بالتزامات محددة بموجب العقد.</li>
+        <li>عقد معاوضي: قد يكون عقد الوكالة معاوضًا، حيث يتقاضى الوكيل أجرًا على العمل الذي يقوم به.</li>
+        <li>عقد جائز: يجوز لكل من الموكل والوكيل إنهاء العقد في أي وقت.</li>
+    </ul>
+    <h3>التزامات الموكل:</h3>
+    <ul>
+        <li>دفع أجر الوكيل: إذا كان عقد الوكالة معاوضًا، يلتزم الموكل بدفع أجر الوكيل.</li>
+        <li>تعويض الوكيل عن الأضرار التي لحقته: يلتزم الموكل بتعويض الوكيل عن الأضرار التي لحقته بسبب قيامه بالعمل الموكل به.</li>
+    </ul>
+    <h3>التزامات الوكيل:</h3>
+    <ul>
+        <li>القيام بالعمل الموكل به: يلتزم الوكيل بالقيام بالعمل الموكل به بعناية واجتهاد.</li>
+        <li>الالتزام بتعليمات الموكل: يلتزم الوكيل بالالتزام بتعليمات الموكل.</li>
+        <li>إخطار الموكل بجميع ما يتعلق بالعمل الموكل به: يلتزم الوكيل بإخطار الموكل بجميع ما يتعلق بالعمل الموكل به.</li>
+        <li>حفظ أموال الموكل: يلتزم الوكيل بحفظ أموال الموكل التي تسلمها منه.</li>
+    </ul>
+    <h3>إنهاء عقد الوكالة:</h3>
+    <p>ينتهي عقد الوكالة في الحالات التالية:</p>
+    <ul>
+        <li>موت الموكل أو الوكيل.</li>
+        <li>إفلاس الموكل أو الوكيل.</li>
+        <li>عزل الوكيل من قبل الموكل.</li>
+        <li>استقالة الوكيل من الوكالة.</li>
+        <li>انتهاء العمل الموكل به.</li>
+    </ul>
+</section>
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2024</p>
+</footer>
+
+</body>
+</html>

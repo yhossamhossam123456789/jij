@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عقد الوديعة</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            line-height: 1.6;
+            background-image: url('https://media.licdn.com/dms/image/C561BAQFUwiRbjspH-g/company-background_10000/0/1584145708576/mohamahapp_cover?e=2147483647&v=beta&t=xowe6pRIKnNVDcAoVjHgq8bZck3qZc8cZb6GRwNi1aA');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        button {
+            background: transparent;
+            color: #fff;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: none;
+            padding: 15px 15px;
+            perspective: 30rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+            z-index: -1;
+            transition: background 0.3s ease;
+        }
+
+        button:hover::before {
+            background: linear-gradient(160deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+        }
+
+        header {
+            text-align: right;
+            padding: 20px;
+            background-color: #343434;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            gap: 10px;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 700px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            text-align: right;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0; /* لجعله يظهر في أسفل الصفحة */
+        }
+
+        img.logo {
+            width: 100px;
+            height: auto;
+            margin-left: auto;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #3498db;
+        }
+
+        section p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        section ul {
+            padding: 0;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        section ul li {
+            list-style: none;
+            text-align: right;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>مرحباً بك في صفحة عقد الوديعة</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5WjOwCF-tbOX6IWRdO212BwskCFf-0Y7ULg&s" class="logo" />
+    <nav>
+        <ul>
+            <li><a href="http://127.0.0.1:5500/types-of-contracts.html"><button>صفحة انواع العقود</button></a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2>عقد الوديعة</h2>
+    <p>عقد الوديعة هو عقد يلتزم فيه الوديع بحفظ مال أو شيء مثلي مملوك للمودع، وذلك مجاناً أو بأجر، على أن يرده للمودع عند طلبه.</p>
+    <h3>خصائص عقد الوديعة:</h3>
+    <ul>
+        <li>عقد رضائي: لا يشترط فيه شكل معين، ويكفي مجرد اتفاق المودع والوديع على جميع شروطه.</li>
+        <li>عقد مجاني: الأصل في عقد الوديعة أنه مجاني، إلا أنه يجوز الاتفاق على أجرة مقابل حفظ المال أو الشيء المودع.</li>
+        <li>عقد شخصي: لا يجوز للمودع أو الوديع أن ينيب عنهما في تنفيذ هذا العقد.</li>
+        <li>عقد لازم: لا يجوز لأي من الطرفين فسخه إلا في الحالات التي نص عليها القانون.</li>
+    </ul>
+    <h3>تفاصيل عقد الوديعة:</h3>
+    <ul>
+        <li>المال أو الشيء المودع: يجب أن يكون المال أو الشيء المودع مثلياً، أي قابلاً للوزن أو العد أو الكيل.</li>
+        <li>مكان حفظ المال أو الشيء المودع: يترك تحديد مكان حفظ المال أو الشيء المودع لاتفاق الطرفين.</li>
+        <li>المدة: لا يشترط لعقد الوديعة مدة معينة، ويكون الوديع ملزماً برد المال أو الشيء المودع عند طلبه.</li>
+    </ul>
+    <h3>الإنهاء:</h3>
+    <p>ينتهي عقد الوديعة في الحالات التالية:</p>
+    <ul>
+        <li>بطلب المودع: للمودع أن يطلب استرداد ماله أو الشيء المودع في أي وقت.</li>
+        <li>بموت المودع: ينتهي عقد الوديعة بوفاة المودع، ويصبح المال أو الشيء المودع جزءاً من تركته.</li>
+        <li>بموت الوديع: ينتهي عقد الوديعة بوفاة الوديع، ويجب على ورثته رد المال أو الشيء المودع للمودع.</li>
+        <li>بإفلاس الوديع: ينتهي عقد الوديعة بإفلاس الوديع، ويصبح المال أو الشيء المودع جزءاً من تركته.</li>
+    </ul>
+    <h3>الواجبات والالتزامات:</h3>
+    <p>واجبات المودع:</p>
+    <ul>
+        <li>تسليم المال أو الشيء المودع للوديع.</li>
+        <li>دفع أجرة حفظ المال أو الشيء المودع (إن وجد).</li>
+    </ul>
+    <p>واجبات الوديع:</p>
+    <ul>
+        <li>حفظ المال أو الشيء المودع بعناية.</li>
+        <li>عدم استعمال المال أو الشيء المودع دون إذن المودع.</li>
+        <li>رد المال أو الشيء المودع للمودع عند طلبه.</li>
+    </ul>
+    <h3>الآثار القانونية:</h3>
+    <p>مسؤولية الوديع: يتحمل الوديع مسؤولية هلاك المال أو الشيء المودع في حال إهماله أو تفريطه.</p>
+    <p>حقوق المودع: للمودع حق استرداد ماله أو الشيء المودع في أي وقت.</p>
+    <p>حقوق الوديع: للوديع حق حبس المال أو الشيء المودع حتى يتقاضى أجرة حفظه (إن وجد).</p>
+</section>
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2024</p>
+</footer>
+
+</body>
+</html>

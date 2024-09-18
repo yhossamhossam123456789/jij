@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنواع القضايا</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            line-height: 1.6;
+            background-image: url('https://media.licdn.com/dms/image/C561BAQFUwiRbjspH-g/company-background_10000/0/1584145708576/mohamahapp_cover?e=2147483647&v=beta&t=xowe6pRIKnNVDcAoVjHgq8bZck3qZc8cZb6GRwNi1aA');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        button {
+            background: transparent;
+            color: #fff;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: none;
+            padding: 15px 15px; /* تم تحديد حجم الأزرار بشكل أصغر */
+            perspective: 30rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+            cursor: pointer; /* تحويل المؤشر إلى يد عند التحويل */
+            transition: all 0.3s ease; /* تأثير التحويل عند التحويل */
+        }
+
+        button::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+            z-index: -1; /* وضعية أقل من النص */
+            transition: background 0.3s ease; /* تأثير التحويل عند التحويل */
+        }
+
+        button:hover::before {
+            background: linear-gradient(160deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+        }
+
+        header {
+            text-align: right;
+            padding: 20px;
+            background-color: #343434;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInDown 1s ease both;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            gap: 10px;
+            animation: fadeInDown 1s ease both;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 700px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            text-align: right;
+            animation: fadeInUp 1s ease both;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            animation: fadeInUp 1s ease both;
+        }
+
+        img.logo {
+            width: 100px;
+            height: auto;
+            margin-left: auto;
+            animation: fadeInRight 1s ease both;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #f1c40f;
+            animation: fadeInUp 1s ease both;
+        }
+
+        section p {
+            text-align: justify;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease both;
+        }
+
+        section ul {
+            padding: 0;
+            text-align: justify;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease both;
+        }
+
+        section ul li {
+            list-style: none;
+            text-align: right;
+            margin-bottom: 5px;
+            animation: fadeInUp 1s ease both;
+        }
+
+        /* تعريف تأثيرات الانتقال */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translate3d(0, -50%, 0);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 50%, 0);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translate3d(50%, 0, 0);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+                /* تنسيق الكارت الأخبار */
+                .news-card {
+            position: fixed;
+            top: 50%;
+            left: 1%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            border-radius: 3px;
+            width: 300px;
+            text-align: right;
+        }
+
+        /* تحريك الكارت الأخبار */
+        .news-card p {
+            display: none;
+            animation: changeNews 9s infinite;
+        }
+
+        /* تحديد نص الخبر */
+        .news-card p.active {
+            display: block;
+        }
+
+        /* تحريك النصوص */
+        @keyframes changeNews {
+            0% {
+                opacity: 0;
+            }
+            33% {
+                opacity: 1;
+            }
+            66% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>مرحباً بك في صفحة أنواع القضايا</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5WjOwCF-tbOX6IWRdO212BwskCFf-0Y7ULg&s" class="logo" />
+    <nav>
+        <ul>
+            <li><a href="index.html"><button>الصفحة الرئيسية</button></a></li>
+        </ul>
+    </nav>
+</header>
+
+
+ <!-- كود الكارت الأخبار -->
+ <div class="news-card">
+    <div class="news-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaK9pquYhDKeNyGn6azySYSjwN28JOFGSf5A&s">
+    </div>
+    <p class="active">إطلاق مبادرة قانونية جديدة لتعزيز حقوق المرأة في العمل </p>
+    <div class="news-image" style="display: none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfOgYu9ftk2-S767ZnoBJnyZ_rHvf3tU76lxRfAq-qAw&s" alt="صورة الخبر الثاني" style="width: 100%; border-radius: 10px;">
+    </div>
+    <p>تحديث قانوني يعزز حماية حقوق المستأجرين في الإيجارات السكنية</p>
+    <div class="news-image" style="display: none;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1MiF-2EyIyXh7FnlqGj9tVMdnZYbAKiuUDQ&s" alt="صورة الخبر الثالث" style="width: 100%; border-radius: 10px;">
+    </div>
+    <p>توقيع اتفاقية دولية لمكافحة الفساد وتعزيز الشفافية الحكومية</p>
+</div>
+
+    <section>
+        <h2 style="color: #2ab4ff;">أنواع القضايا في المحاكم المصرية</h2>
+        <p>تنقسم القضايا في المحاكم المصرية إلى أربعة أنواع رئيسية:</p>
+        <ol>
+            <li style="animation: fadeInUp 1s ease 0.3s;">
+                <h3>القضايا الجنائية:</h3>
+                <p>هي القضايا التي تتعلق بارتكاب جرائم يعاقب عليها القانون، مثل القتل والسرقة والاعتداء والإتلاف.</p>
+                <p>المحاكم المختصة: محاكم الجنايات.</p>
+                <p>الإجراءات: تبدأ بتقديم بلاغ إلى الشرطة، ثم تحقيق النيابة العامة وتوجيه الاتهام إلى المتهم، وإحالته إلى المحكمة المختصة.</p>
+            </li>
+            <li style="animation: fadeInUp 1s ease 0.6s;">
+                <h3>القضايا المدنية والتجارية:</h3>
+                <p>هي القضايا التي تنشأ عن منازعات بين الأفراد أو الشركات حول الحقوق والواجبات، مثل قضايا العقود والملكية والإيجار والديون والتعويض.</p>
+                <p>المحاكم المختصة: محاكم القضاء العادي.</p>
+                <p>الإجراءات: تبدأ برفع دعوى من قبل المدعي ضد المدعى عليه، وتحدد المحكمة جلسة للمرافعة، ثم تصدر حكمها في القضية.</p>
+            </li>
+            <li style="animation: fadeInUp 1s ease 0.9s;">
+                <h3>القضايا الإدارية:</h3>
+                <p>هي القضايا التي تنشأ عن منازعات بين الأفراد والإدارة العامة، مثل قضايا إلغاء القرارات الإدارية والتعويض عن الأضرار التي تسببها الإدارة.</p>
+                <p>المحاكم المختصة: محاكم مجلس الدولة.</p>
+                <p>الإجراءات: تبدأ برفع دعوى من قبل المدعي ضد جهة الإدارة، وتحدد المحكمة جلسة للمرافعة، ثم تصدر حكمها في القضية.</p>
+            </li>
+            <li style="animation: fadeInUp 1s ease 1.2s;">
+                <h3>القضايا الشرعية:</h3>
+                <p>هي القضايا التي تنشأ عن مسائل الأحوال الشخصية، مثل قضايا الزواج والطلاق والنفقة والحضانة والميراث.</p>
+                <p>المحاكم المختصة: محاكم الأسرة.</p>
+                <p>الإجراءات: تبدأ برفع دعوى من قبل أحد طرفي النزاع، وتحدد المحكمة جلسة للمرافعة، ثم تصدر حكمها في القضية.</p>
+            </li>
+        </ol>
+        <p>ملاحظة: قد تنتمي بعض القضايا إلى أكثر من نوع واحد من أنواع القضايا. يُنصح باستشارة محامٍ مختص للحصول على معلومات أكثر تفصيلاً حول نوع القضية المراد رفعها.</p>
+    </section>
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2024</p>
+    <p>تواصل معنا: support@legalwebsite.com</p>
+</footer>
+<script>
+    // اختيار جميع الأخبار والصور
+    const newsItems = document.querySelectorAll('.news-card p');
+    const newsImages = document.querySelectorAll('.news-card .news-image');
+    let currentNewsIndex = 0;
+
+    // إظهار الخبر التالي وإخفاء الحالي
+    function showNextNews() {
+        // إخفاء الخبر الحالي والصورة
+        newsItems[currentNewsIndex].classList.remove('active');
+        newsImages[currentNewsIndex].style.display = 'none';
+
+        // زيادة الفهرس لعرض الخبر التالي، وإذا وصلنا إلى نهاية القائمة نبدأ من البداية مرة أخرى
+        currentNewsIndex = (currentNewsIndex + 1) % newsItems.length;
+
+        // إظهار الخبر التالي والصورة
+        newsItems[currentNewsIndex].classList.add('active');
+        newsImages[currentNewsIndex].style.display = 'block';
+    }
+
+    // عرض الخبر التالي كل 9 ثواني
+    setInterval(showNextNews, 9000);
+</script>
+</body>
+</html>

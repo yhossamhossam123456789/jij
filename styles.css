@@ -1,0 +1,99 @@
+/* تحسينات تصميم الموقع */
+
+body {
+  font-family: "Tahoma", Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #444;
+  margin: 0;
+  padding: 0;
+  direction: rtl; /* تحديد اتجاه الكتابة إلى اليمين */
+  line-height: 1.8; /* تحديد تباعد الأسطر */
+}
+
+/* تخصيص الزر والروابط */
+button, a {
+  padding: 12px 24px;
+  margin: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, a:hover {
+  background-color: #0056b3;
+}
+
+/* تحسين تنسيق العناصر داخل الأقسام */
+section {
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+/* تحسين تنسيق العناصر النصية */
+p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+ul {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* تخصيص صور الشاشة */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* تخصيص ترويسة الصفحة */
+header {
+  padding: 20px;
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* تحسين تنسيق القائمة */
+nav ul {
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* تحسين تنسيق التذييل */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عقد البيع</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            line-height: 1.6;
+            background-image: url('https://media.licdn.com/dms/image/C561BAQFUwiRbjspH-g/company-background_10000/0/1584145708576/mohamahapp_cover?e=2147483647&v=beta&t=xowe6pRIKnNVDcAoVjHgq8bZck3qZc8cZb6GRwNi1aA');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        button {
+            background: transparent;
+            color: #fff;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: none;
+            padding: 15px 15px;
+            perspective: 30rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        button::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+            z-index: -1;
+            transition: background 0.3s ease;
+        }
+
+        button:hover::before {
+            background: linear-gradient(160deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+        }
+
+        header {
+            text-align: right;
+            padding: 20px;
+            background-color: #343434;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            gap: 10px;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 700px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            text-align: right;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0; /* لجعله يظهر في أسفل الصفحة */
+        }
+
+        img.logo {
+            width: 100px;
+            height: auto;
+            margin-left: auto;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #3498db;
+        }
+
+        section p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        section ul {
+            padding: 0;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        section ul li {
+            list-style: none;
+            text-align: right;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>مرحباً بك في صفحة عقد البيع</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5WjOwCF-tbOX6IWRdO212BwskCFf-0Y7ULg&s" class="logo" />
+    <nav>
+        <ul>
+            <li><a href="http://127.0.0.1:5500/types-of-contracts.html"><button>صفحة انواع العقود</button></a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2 style="color: #1190e5;">عقد البيع</h2>
+    <p>يُعد عقد البيع من أهم العقود التي يبرمها الناس في حياتهم اليومية، حيث يُنظم عملية نقل ملكية شيء معين من شخص (البائع) إلى شخص آخر (المشتري) مقابل ثمن محدد.</p>
+    <p>أركان عقد البيع:</p>
+    <ul>
+        <li>الرضا: اتفاق الطرفين، البائع والمشتري، على جميع شروط العقد.</li>
+        <li>القدرة: يجب أن يكون كل من البائع والمشتري قادرين على التصرف في الشيء المبيع.</li>
+        <li>المحل: الشيء المبيع، ويجب أن يكون معينًا وقابلًا للتسليم.</li>
+        <li>الثمن: المقابل الذي يدفعه المشتري للبائع مقابل الشيء المبيع، ويجب أن يكون محددًا.</li>
+    </ul>
+    <p>أنواع عقود البيع:</p>
+    <ul>
+        <li>عقد بيع نهائي: ينقل ملكية الشيء المبيع من البائع إلى المشتري بشكل نهائي.</li>
+        <li>عقد بيع ابتدائي: يحدد شروط عملية بيع الشيء المبيع، ويتم نقل الملكية في وقت لاحق.</li>
+        <li>عقد بيع تقسيط: دفع ثمن الشيء المبيع على أقساط متتالية.</li>
+    </ul>
+    <p>شروط صحة عقد البيع:</p>
+    <ul>
+        <li>يجب أن يكون العقد مكتوبًا.</li>
+        <li>يجب أن يتضمن العقد جميع الشروط المتفق عليها بين الطرفين.</li>
+        <li>يجب أن يكون العقد خاليًا من العيوب.</li>
+    </ul>
+    <p>أحكام عقد البيع:</p>
+    <p>التزامات البائع:</p>
+    <ul>
+        <li>تسليم الشيء المبيع للمشتري.</li>
+        <li>ضمان سلامة الشيء المبيع من العيوب.</li>
+        <li>ضمان خلو الشيء المبيع من الحقوق العينية.</li>
+    </ul>
+    <p>التزامات المشتري:</p>
+    <ul>
+        <li>دفع ثمن الشيء المبيع للبائع.</li>
+        <li>استلام الشيء المبيع.</li>
+    </ul>
+    <p>فسخ عقد البيع:</p>
+    <ul>
+        <li>يمكن فسخ عقد البيع بالتراضي بين البائع والمشتري.</li>
+        <li>يمكن فسخ عقد البيع بقرار من المحكمة في بعض الحالات، مثل:</li>
+        <ul>
+            <li>عدم وفاء أحد الطرفين بالتزاماته.</li>
+            <li>وجود عيوب في الشيء المبيع.</li>
+            <li>إعسار أحد الطرفين.</li>
+        </ul>
+    </ul>
+    <p>تفاصيل عقد البيع:</p>
+    <p>بيانات البائع والمشتري:</p>
+    <ul>
+        <li>الاسم الكامل.</li>
+        <li>العنوان.</li>
+        <li>الرقم القومي.</li>
+    </ul>
+    <p>بيانات الشيء المبيع:</p>
+    <ul>
+        <li>نوع الشيء المبيع.</li>
+        <li>وصف دقيق للشيء المبيع.</li>
+        <li>كمية الشيء المبيع.</li>
+    </ul>
+    <p>الثمن:</p>
+    <ul>
+        <li>المبلغ المالي للثمن.</li>
+        <li>طريقة دفع الثمن.</li>
+        <li>مواعيد دفع الثمن.</li>
+    </ul>
+    <p>الشروط الجزائية:</p>
+    <ul>
+        <li>شروط محددة في حال عدم وفاء أحد الطرفين بالتزاماته.</li>
+    </ul>
+    <p>التوقيعات:</p>
+    <p>توقيع البائع والمشتري على جميع صفحات العقد.</p>
+</section>
+
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2024</p>
+</footer>
+
+</body>
+</html>
